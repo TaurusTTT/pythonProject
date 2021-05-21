@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷</title>
+</head>
+<body>
+这是问卷
+<form action="submit/" method="post">
+    {% csrf_token%}
+    <p>
+        <label>学号：</label>
+        <input name="stuID">
+    </p>
+    <p>
+        <label>姓名：</label>
+        <input name="name">
+    </p>
+    <p>
+        <label>是否已接种疫苗：</label><br>
+        <input type="radio" name="vaccinateornot" value="yes">Yes!<br>
+        <input type="radio" name="vaccinateornot" value="no">No..
+    </p>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
